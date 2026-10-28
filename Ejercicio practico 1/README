@@ -1,0 +1,5 @@
+Pasos que utilice para completar el ejercicio 1
+1.- Preparar archivos necesarios para el servidor. Use npm para crear el archivo package,
+el cual contiene la informacion de nustro servidor, version, dependencias y scripts
+2.-Instalar frameworck express, usamos nuevamente npm para la isntalacion del frameworck,
+creamos un archivo llamado server.js que sera nuestro servidor
