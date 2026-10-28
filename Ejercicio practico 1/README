@@ -3,3 +3,8 @@ Pasos que utilice para completar el ejercicio 1
 el cual contiene la informacion de nustro servidor, version, dependencias y scripts
 2.-Instalar frameworck express, usamos nuevamente npm para la isntalacion del frameworck,
 creamos un archivo llamado server.js que sera nuestro servidor
+3.-Crear conexion con la base de datos. Es necesario instalar mongoose para poder crear una
+coneccion a la base de datos, nuevamente usaremos npm. antes de conectar la base de datos
+tenemos que crear una en mongodb copiar la url con su respectivo nombre de base de datos,
+tambien es necesario crear el esquema en el que se almacenaran los datos, una vez creados
+ya se podra almacenar informacion en ella.
