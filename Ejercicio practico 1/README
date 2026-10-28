@@ -10,3 +10,6 @@ tambien es necesario crear el esquema en el que se almacenaran los datos, una ve
 ya se podra almacenar informacion en ella.
 4.-Crear Crud basico, actualmente se puede lerr, crear, actualizar y borrar productos
 sin ningun tipo de permisos.
+5.- Usar middleware y utilizar jsonwebtoken para proteger una ruta, necesitaremos instalar jwt
+ya es una libreria aparte. Asi mismo se usara npm para la isntalacion
+6.- Ejercicio terminado, use postman para la comprobacion.

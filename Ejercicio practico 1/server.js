@@ -1,8 +1,35 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const jwt = require('jsonwebtoken');
 
 const app = express();
 app.use(express.json());
+
+app.use((req, res, next) => {
+    console.log(`${req.method} ${req.url}`);
+    next();
+});
+
+const secretKey = 'mi_clave_secreta';
+
+app.post('/login', (req, res) => {
+    const token = jwt.sign({ username: req.body.username }, secretKey, { expiresIn: '1h' });
+    res.json({ token });
+});
+
+const verificarToken = (req, res, next) => {
+    const token = req.headers['authorization'];
+    if (!token) {
+        return res.status(403).json({ error: 'No se proporcionó un token' });
+    }
+    try {
+        const decoded = jwt.verify(token, secretKey);
+        req.user = decoded;
+        next();
+    } catch (error) {
+        return res.status(401).json({ error: 'Token inválido' });
+    }
+};
 
 //conexión a la base de datos
 mongoose.connect('mongodb://localhost:27017/productos').then(() => {
@@ -52,7 +79,7 @@ app.put('/productos/:id', async (req, res) => {
     }
 });
 
-app.delete('/productos/:id', async (req, res) => {
+app.delete('/productos/:id', verificarToken, async (req, res) => {
     try {
         const productoEliminado = await Producto.findByIdAndDelete(req.params.id);
         if (!productoEliminado) {
