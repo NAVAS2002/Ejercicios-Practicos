@@ -8,3 +8,5 @@ coneccion a la base de datos, nuevamente usaremos npm. antes de conectar la base
 tenemos que crear una en mongodb copiar la url con su respectivo nombre de base de datos,
 tambien es necesario crear el esquema en el que se almacenaran los datos, una vez creados
 ya se podra almacenar informacion en ella.
+4.-Crear Crud basico, actualmente se puede lerr, crear, actualizar y borrar productos
+sin ningun tipo de permisos.
