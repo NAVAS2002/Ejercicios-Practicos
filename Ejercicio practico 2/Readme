@@ -1,3 +1,6 @@
 1.Para comenzar este ejercicio se nos pide trabajar con react, lo primero que tenemos que hacer es
 isntalar nustra biblioteca de react. se utilizo el comando npm create vite@latest catalogo-productos -- --template react
 2.tambien anteriormente se configuro cors para poder conectarlos al api sin que nos rechace la conexion
+3.- ahora instalaremos las dependecias y iniciaremos el proyecto
+4.- trabajaremos unicamente el el App.js por lo que tendremos que borrar todo su conetnido
+5.- creamos nuestra app y importamos lo requerido 
